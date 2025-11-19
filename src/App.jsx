@@ -1,71 +1,55 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Logos from './components/Logos';
+import Features from './components/Features';
+import Showcase from './components/Showcase';
+import CTA from './components/CTA';
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-slate-950">
+      <Navbar />
+      <Hero />
+      <Logos />
+      <Features />
+      <Showcase />
+      <CTA />
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
+      <footer id="contact" className="bg-slate-950 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-slate-300">
+            <div>
+              <h4 className="text-white font-semibold">AIOS Center</h4>
+              <p className="mt-2 text-slate-400">Soluciones de IA, automatización y agentes para empresas que quieren escalar.</p>
             </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
+            <div>
+              <h4 className="text-white font-semibold">Servicios</h4>
+              <ul className="mt-2 space-y-1 text-slate-400">
+                <li>Asistentes y agentes</li>
+                <li>Automatización (RPA)</li>
+                <li>Modelos y fine-tuning</li>
+                <li>Consultoría</li>
+              </ul>
             </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
+            <div>
+              <h4 className="text-white font-semibold">Recursos</h4>
+              <ul className="mt-2 space-y-1 text-slate-400">
+                <li>Casos de éxito</li>
+                <li>Blog</li>
+                <li>Documentación</li>
+              </ul>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
+            <div>
+              <h4 className="text-white font-semibold">Contacto</h4>
+              <ul className="mt-2 space-y-1 text-slate-400">
+                <li>Email: hola@aioscenter.com</li>
+                <li>Latam / España</li>
+              </ul>
             </div>
           </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
-          </div>
+          <div className="mt-10 text-center text-xs text-slate-500">© {new Date().getFullYear()} AIOS Center. Todos los derechos reservados.</div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
